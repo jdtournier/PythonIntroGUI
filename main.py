@@ -29,11 +29,15 @@ def rms(data):
 
 def load_patient_file(path):
     # code to load data goes here
+    print('loading patient file:', path)
+    State.patient = pd.read_excel (path)
     pass
 
     
 def load_control_file(path):
     # code to load data goes here
+    print('loading control file:', path)
+    State.control = pd.read_excel (path)
     pass
 
     
@@ -76,6 +80,7 @@ def calc_GPS():
         print('no data to calculate do calculation')
 
     
+
 def show_graph(path):
     # path is the name of the angle from the drop down list
     fig,ax = plt.subplots()
